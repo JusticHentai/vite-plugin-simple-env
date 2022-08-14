@@ -1,9 +1,19 @@
 {
-  "name": "@justichentai/utility-library",
+  "name": "@justichentai/vite-plugin-simple-env",
   "version": "0.0.1",
-  "description": "douza js库模板",
+  "description": "easier to get environment variables in vite",
+  "keywords": [
+    "justichentai",
+    "vite",
+    "plugin"
+  ],
+  "homepage": "https://github.com/JusticHentai/vite-plugin-simple-env",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JusticHentai/vite-plugin-simple-env"
+  },
   "license": "ISC",
-  "author": "douza",
+  "author": "justichentai",
   "type": "module",
   "main": "dist/my-component.js",
   "typings": "dist/my-component.d.ts",
