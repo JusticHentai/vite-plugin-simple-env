@@ -5,7 +5,8 @@
   "keywords": [
     "justichentai",
     "vite",
-    "plugin"
+    "plugin",
+    "env"
   ],
   "homepage": "https://github.com/JusticHentai/vite-plugin-simple-env",
   "repository": {
