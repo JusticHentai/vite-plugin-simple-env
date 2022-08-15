@@ -7,9 +7,8 @@ export interface Options {
   key: string
 }
 
-export default function simpleEnv(options: Options = { key: 'PAGE' }): any {
+export default function simpleEnv(key = 'PAGE'): any {
   const { env } = parseScriptCommand()
-  const { key } = options
 
   return {
     name: 'vite-plugin-simple-env',
@@ -19,9 +18,6 @@ export default function simpleEnv(options: Options = { key: 'PAGE' }): any {
         'process.env': JSON.stringify({
           [key]: env,
         }),
-      },
-      server: {
-        port: 8081, // 端口为 8081
       },
     }),
   }
