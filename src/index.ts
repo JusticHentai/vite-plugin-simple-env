@@ -1,14 +1,14 @@
 import parseScriptCommand from './utils/parseScriptCommand'
 
-/**
- * 挂载到 process.env[key]
- */
 export interface Options {
-  key: string
+  key: string // 挂载到 process.env[key]
+  configKey: string // 挂载到 vite config 里
 }
 
-export default function simpleEnv(key = 'PAGE'): any {
-  const { env } = parseScriptCommand()
+export default function simpleEnv(options: Options): any {
+  const { key, configKey } = options
+
+  const { env, event, script } = parseScriptCommand()
 
   return {
     name: 'vite-plugin-simple-env',
@@ -18,6 +18,12 @@ export default function simpleEnv(key = 'PAGE'): any {
         'process.env': JSON.stringify({
           [key]: env,
         }),
+      },
+      [configKey]: {
+        [event]: {
+          env,
+          script,
+        },
       },
     }),
   }
