@@ -1,6 +1,6 @@
 {
   "name": "@justichentai/vite-plugin-simple-env",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "easier to get environment variables in vite",
   "keywords": [
     "justichentai",

@@ -74,9 +74,9 @@ const { env, event, script } = parseScriptCommand()
 
 ```ts
 interface Options {
-  key: string;         // process.env[key]
-  configKey: string;   // key which you mount it in vite config 
-  cb: (options: {      // callblack that you can set vite config custom
+  key?: string;         // process.env[key]
+  configKey?: string;   // key which you mount it in vite config 
+  cb?: (options: {      // callblack that you can set vite config custom
     env: string;     // Environment variables
     event: string;   // string before event:env
     script: string;  // script content
